@@ -54,6 +54,8 @@ class GochisTableViewCell: UITableViewCell {
     
     // MARK: - UI 세팅 부분 (정적)
     func setUpUI() {
+        
+        
         gochiImage.layer.masksToBounds = true
         //gochiImage.layer.cornerRadius = gochiImage.frame.height / 2
         //gochiImage.layer.borderColor = UIColor.gochiFontColor.cgColor

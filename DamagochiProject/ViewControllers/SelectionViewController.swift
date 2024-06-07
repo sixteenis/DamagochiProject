@@ -43,12 +43,13 @@ class SelectionViewController: UIViewController {
         gochiTable.backgroundColor = .gochiBackgroundColor
     }
     func tableviewConnect() {
-        print(#function)
         gochiTable.dataSource = self
         gochiTable.delegate = self
         gochiTable.register(GochisTableViewCell.self, forCellReuseIdentifier: GochisTableViewCell.id)
         gochiTable.rowHeight = 120
         gochiTable.backgroundColor = .gochiBackgroundColor
+        //gochiTable.separatorStyle = .none
+
         
         
     }
@@ -56,17 +57,48 @@ class SelectionViewController: UIViewController {
 }
 extension SelectionViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(#function)
+        //print(#function)
         return gochiList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(#function)
+        //print(#function)
         let cell = tableView.dequeueReusableCell(withIdentifier: GochisTableViewCell.id, for: indexPath) as! GochisTableViewCell
         let data = gochiList[indexPath.row]
         cell.setUpData(data: data)
-        
+        cell.selectionStyle = .none
         return cell
+    }
+    
+    // MARK: - 다마고치 선택 후 다음 화면으로 이동하는 부분
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(#function)
+        let gochi = gochiList[indexPath.row]
+        if gochi.name != "준비중이에요"{
+            //1.
+            let alert = UIAlertController(
+                title: gochi.name,
+                message: "\(gochi.name)을 키우시겠습니까? \n추후에 변경 가능합니다!",
+                preferredStyle: .alert
+            )
+            //2.
+            let ok = UIAlertAction(title: "확인", style: .default,handler: {_ in
+                let vc = StartGochGameViewController()
+                vc.modalPresentationStyle = .fullScreen
+                GochiModel.gochi = gochi.name
+                self.present(vc, animated: false, completion: nil)
+                
+                
+            })
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            
+            //3.
+            alert.addAction(cancel)
+            alert.addAction(ok)
+            
+            //4
+            present(alert, animated: true)
+        }
     }
     
     

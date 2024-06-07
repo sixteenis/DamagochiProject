@@ -12,6 +12,12 @@
 		06C545962C12C42400B3F23A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06C545952C12C42400B3F23A /* Assets.xcassets */; };
 		06C545992C12C42400B3F23A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 06C545982C12C42400B3F23A /* Base */; };
 		06C545A12C12C48B00B3F23A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 06C545A02C12C48B00B3F23A /* .gitignore */; };
+		06C545A62C12C58500B3F23A /* ReuseIdentifier+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545A52C12C58500B3F23A /* ReuseIdentifier+.swift */; };
+		06C545A82C12C61300B3F23A /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545A72C12C61300B3F23A /* SelectionViewController.swift */; };
+		06C545AB2C12E38500B3F23A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 06C545AA2C12E38500B3F23A /* SnapKit */; };
+		06C545AE2C12E3B200B3F23A /* GochisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545AD2C12E3B200B3F23A /* GochisTableViewCell.swift */; };
+		06C545B02C1315C100B3F23A /* GochiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545AF2C1315C100B3F23A /* GochiModel.swift */; };
+		06C545B22C132B8200B3F23A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545B12C132B8200B3F23A /* Color+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,11 @@
 		06C545982C12C42400B3F23A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06C5459A2C12C42400B3F23A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06C545A02C12C48B00B3F23A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		06C545A52C12C58500B3F23A /* ReuseIdentifier+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReuseIdentifier+.swift"; sourceTree = "<group>"; };
+		06C545A72C12C61300B3F23A /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		06C545AD2C12E3B200B3F23A /* GochisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GochisTableViewCell.swift; sourceTree = "<group>"; };
+		06C545AF2C1315C100B3F23A /* GochiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GochiModel.swift; sourceTree = "<group>"; };
+		06C545B12C132B8200B3F23A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C545AB2C12E38500B3F23A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,11 +69,48 @@
 			children = (
 				06C5458C2C12C42200B3F23A /* AppDelegate.swift */,
 				06C5458E2C12C42200B3F23A /* SceneDelegate.swift */,
-				06C545952C12C42400B3F23A /* Assets.xcassets */,
+				06C545A42C12C54300B3F23A /* Exteions+ */,
+				06C545A32C12C53D00B3F23A /* Models */,
+				06C545A22C12C52100B3F23A /* ViewControllers */,
+				06C545AC2C12E39300B3F23A /* Cells */,
 				06C545972C12C42400B3F23A /* LaunchScreen.storyboard */,
+				06C545952C12C42400B3F23A /* Assets.xcassets */,
 				06C5459A2C12C42400B3F23A /* Info.plist */,
 			);
 			path = DamagochiProject;
+			sourceTree = "<group>";
+		};
+		06C545A22C12C52100B3F23A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				06C545A72C12C61300B3F23A /* SelectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		06C545A32C12C53D00B3F23A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				06C545AF2C1315C100B3F23A /* GochiModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		06C545A42C12C54300B3F23A /* Exteions+ */ = {
+			isa = PBXGroup;
+			children = (
+				06C545A52C12C58500B3F23A /* ReuseIdentifier+.swift */,
+				06C545B12C132B8200B3F23A /* Color+.swift */,
+			);
+			path = "Exteions+";
+			sourceTree = "<group>";
+		};
+		06C545AC2C12E39300B3F23A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				06C545AD2C12E3B200B3F23A /* GochisTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +129,9 @@
 			dependencies = (
 			);
 			name = DamagochiProject;
+			packageProductDependencies = (
+				06C545AA2C12E38500B3F23A /* SnapKit */,
+			);
 			productName = DamagochiProject;
 			productReference = 06C545892C12C42200B3F23A /* DamagochiProject.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 06C545802C12C42200B3F23A;
+			packageReferences = (
+				06C545A92C12E38500B3F23A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 06C5458A2C12C42200B3F23A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,8 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C545B22C132B8200B3F23A /* Color+.swift in Sources */,
+				06C545A62C12C58500B3F23A /* ReuseIdentifier+.swift in Sources */,
+				06C545A82C12C61300B3F23A /* SelectionViewController.swift in Sources */,
 				06C5458D2C12C42200B3F23A /* AppDelegate.swift in Sources */,
 				06C5458F2C12C42200B3F23A /* SceneDelegate.swift in Sources */,
+				06C545B02C1315C100B3F23A /* GochiModel.swift in Sources */,
+				06C545AE2C12E3B200B3F23A /* GochisTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +348,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,7 +381,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,6 +421,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		06C545A92C12E38500B3F23A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		06C545AA2C12E38500B3F23A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06C545A92C12E38500B3F23A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06C545812C12C42200B3F23A /* Project object */;
 }

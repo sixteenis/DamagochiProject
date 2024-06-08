@@ -34,6 +34,23 @@ struct GochiModel {
         }
         
     }
+    static var getLevel: Int {
+        let result = (Self.gochiRice / 5) + (Self.gochiWater / 2)
+        
+        return result / 10
+    }
+    static var getImage: String {
+        switch gochi {
+        case "따끔따끔 다마고치":
+            return "1"
+        case "방실방실 다마고치":
+            return "2"
+        case "반짝반짝 다마고치":
+            return "3"
+        default:
+            return "??"
+        }
+    }
 }
 struct Gochi{
     let name: String

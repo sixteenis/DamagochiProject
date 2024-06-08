@@ -18,11 +18,11 @@ class StartGochGameViewController: UIViewController {
     
     let gochiRiceTextField = UITextField()
     let gochiRiceLine = UIView()
-    let gochiRiceButton = UIButton()
+    let gochiRiceButton = UIButton(type: .system)
     
     let gochiWaterTextField = UITextField()
     let gochiWaterLine = UIView()
-    let gochiWaterButton = UIButton()
+    let gochiWaterButton = UIButton(type: .system)
     
     
     override func viewDidLoad() {
@@ -30,6 +30,9 @@ class StartGochGameViewController: UIViewController {
         setUpHierarch()
         setUpLayout()
         setUpUI()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        setUpDataGochi()
     }
     
     // MARK: - connect 부분
@@ -91,7 +94,7 @@ class StartGochGameViewController: UIViewController {
             make.top.equalTo(gochiState.snp.bottom).offset(30)
             make.trailing.equalTo(view.safeAreaLayoutGuide).inset(60)
             make.height.equalTo(35)
-            make.width.equalTo(70)
+            make.width.equalTo(80)
         }
         
         gochiWaterTextField.snp.makeConstraints { make in
@@ -112,7 +115,7 @@ class StartGochGameViewController: UIViewController {
             make.top.equalTo(gochiRiceLine.snp.bottom).offset(30)
             make.trailing.equalTo(view.safeAreaLayoutGuide).inset(60)
             make.height.equalTo(35)
-            make.width.equalTo(70)
+            make.width.equalTo(80)
         }
     }
     
@@ -126,31 +129,50 @@ class StartGochGameViewController: UIViewController {
         gochiMessageLabel.text = "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
         gochiMessageLabel.numberOfLines = 0
         
-        gochiImage.image = ._1_2
+        //gochiImage.image = ._1_2
         
-        gochiNameLabel.text = "11111"
+        //gochiNameLabel.text = "11111"
+        gochiNameLabel.textAlignment = .center
+        gochiNameLabel.layer.cornerRadius = 5
+        gochiNameLabel.layer.borderColor = UIColor.gochiFontColor.cgColor
+        gochiNameLabel.layer.borderWidth = 1
+        gochiNameLabel.backgroundColor = .gochiBackgroundColor
         
-        gochiState.text = "상태창ㅇㅇㅇㅇㅇ"
+        //gochiState.text = "상태창ㅇㅇㅇㅇㅇ"
         
         gochiRiceTextField.contentMode = .center
         gochiRiceTextField.placeholder = "밥주세용"
+        gochiRiceTextField.keyboardType = .numberPad
         
         gochiRiceLine.backgroundColor = .black
         
-        gochiRiceButton.setTitle("wasd", for: .normal)
-        gochiRiceButton.setTitleColor(.gochiFontColor, for: .normal)
-        gochiRiceButton.backgroundColor = .red
+        gochiRiceButton.setImage(UIImage(systemName: "drop.circle"), for: .normal)
+        gochiRiceButton.setTitle("밥먹기", for: .normal)
+        gochiRiceButton.tintColor = .gochiFontColor
+        gochiRiceButton.backgroundColor = .gochiBackgroundColor
+        gochiRiceButton.layer.cornerRadius = 10
+        gochiRiceButton.layer.borderColor = UIColor.gochiFontColor.cgColor
+        gochiRiceButton.layer.borderWidth = 1
         
         gochiWaterTextField.contentMode = .center
-        gochiWaterTextField.placeholder = "밥주세용"
-        
+        gochiWaterTextField.placeholder = "물주세용"
+        gochiWaterTextField.keyboardType = .numberPad
+
         gochiWaterLine.backgroundColor = .black
         
-        gochiWaterButton.setTitle("wasd", for: .normal)
-        gochiWaterButton.setTitleColor(.gochiFontColor, for: .normal)
-        gochiWaterButton.backgroundColor = .red
-        
-        
+        gochiWaterButton.setImage(UIImage(systemName: "leaf.circle"), for: .normal)
+        gochiWaterButton.tintColor = .gochiFontColor
+        gochiWaterButton.setTitle("물먹기", for: .normal)
+        gochiWaterButton.layer.cornerRadius = 10
+        gochiWaterButton.layer.borderColor = UIColor.gochiFontColor.cgColor
+        gochiWaterButton.layer.borderWidth = 1
+        gochiWaterButton.backgroundColor = .gochiBackgroundColor
+    }
+    func setUpDataGochi() {
+        //1-1
+        gochiImage.image = UIImage(named: "\(GochiModel.getImage)-\(GochiModel.getLevel+1)")
+        gochiNameLabel.text = GochiModel.gochi
+        gochiState.text = "LV\(GochiModel.getLevel), 밥알 \(GochiModel.gochiRice)개, 물방울 \(GochiModel.gochiWater)개"
     }
 
 }

@@ -16,10 +16,23 @@ struct GochiModel {
         }
     }
     
-    static var gochiLevel: Double {
+    static var gochiWater: Int {
         get{
-            return UserDefaults.standard.double(forKey: "gochiLevel")
+            return UserDefaults.standard.integer(forKey: "gochiWater")
+        }set{
+            let before = UserDefaults.standard.integer(forKey: "gochiWater") + newValue
+            UserDefaults.standard.setValue(before, forKey: "gochiWater")
         }
+    }
+    
+    static var gochiRice: Int {
+        get{
+            return UserDefaults.standard.integer(forKey: "gochiRice")
+        }set{
+            let before = UserDefaults.standard.integer(forKey: "gochiRice") + newValue
+            UserDefaults.standard.setValue(before, forKey: "gochiRice")
+        }
+        
     }
 }
 struct Gochi{

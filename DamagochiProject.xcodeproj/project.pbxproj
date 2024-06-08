@@ -19,6 +19,7 @@
 		06C545B02C1315C100B3F23A /* GochiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545AF2C1315C100B3F23A /* GochiModel.swift */; };
 		06C545B22C132B8200B3F23A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545B12C132B8200B3F23A /* Color+.swift */; };
 		06C545B42C136A4500B3F23A /* StartGochGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545B32C136A4500B3F23A /* StartGochGameViewController.swift */; };
+		06F52F902C14A6FC00487212 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52F8F2C14A6FC00487212 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		06C545AF2C1315C100B3F23A /* GochiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GochiModel.swift; sourceTree = "<group>"; };
 		06C545B12C132B8200B3F23A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		06C545B32C136A4500B3F23A /* StartGochGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGochGameViewController.swift; sourceTree = "<group>"; };
+		06F52F8F2C14A6FC00487212 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				06C545AF2C1315C100B3F23A /* GochiModel.swift */,
+				06F52F8F2C14A6FC00487212 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				06C545B42C136A4500B3F23A /* StartGochGameViewController.swift in Sources */,
 				06C5458F2C12C42200B3F23A /* SceneDelegate.swift in Sources */,
 				06C545B02C1315C100B3F23A /* GochiModel.swift in Sources */,
+				06F52F902C14A6FC00487212 /* UserModel.swift in Sources */,
 				06C545AE2C12E3B200B3F23A /* GochisTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

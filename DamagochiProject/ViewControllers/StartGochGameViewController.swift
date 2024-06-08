@@ -27,9 +27,11 @@ class StartGochGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNV()
         setUpHierarch()
         setUpLayout()
         setUpUI()
+        setUpButton()
     }
     override func viewWillAppear(_ animated: Bool) {
         setUpDataGochi()
@@ -118,15 +120,25 @@ class StartGochGameViewController: UIViewController {
             make.width.equalTo(80)
         }
     }
-    
+    // MARK: - 네비게이션 세팅 부분
+    func setUpNV() {
+        if let user = UserModel.nickName {
+            navigationItem.title = "\(user)님의 다마고치"
+        }else{
+            navigationItem.title = "유저님의 다마고치"
+        }
+    }
     // MARK: - UI 세팅 부분
     func setUpUI() {
         view.backgroundColor = .gochiBackgroundColor
         
+        gochiMessageImage.isHidden = true
+        gochiMessageLabel.isHidden = true
+
         gochiMessageImage.image = .bubble
         gochiImage.contentMode = .scaleAspectFill
         
-        gochiMessageLabel.text = "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        
         gochiMessageLabel.numberOfLines = 0
         
         //gochiImage.image = ._1_2
@@ -168,11 +180,75 @@ class StartGochGameViewController: UIViewController {
         gochiWaterButton.layer.borderWidth = 1
         gochiWaterButton.backgroundColor = .gochiBackgroundColor
     }
+    // MARK: - 버튼 세팅 부분
+    func setUpButton() {
+        gochiRiceButton.addTarget(self, action: #selector(riceButtonTapped), for: .touchUpInside)
+        gochiWaterButton.addTarget(self, action: #selector(waterButtonTapped), for: .touchUpInside)
+    }
+    // MARK: - 기능 부분
     func setUpDataGochi() {
         //1-1
-        gochiImage.image = UIImage(named: "\(GochiModel.getImage)-\(GochiModel.getLevel+1)")
+        gochiImage.image = UIImage(named: "\(GochiModel.getGochiNum)-\(GochiModel.getGochiLevelNum)")
         gochiNameLabel.text = GochiModel.gochi
-        gochiState.text = "LV\(GochiModel.getLevel), 밥알 \(GochiModel.gochiRice)개, 물방울 \(GochiModel.gochiWater)개"
+        gochiState.text = GochiModel.stateText
+    }
+    func sendMessage() {
+        gochiMessageImage.isHidden = false
+        gochiMessageLabel.isHidden = false
+        gochiMessageLabel.text = "어쩌구 저쩌구 다마고치 어쩌구~~~~~"
+        sleep(3)
+        gochiMessageImage.isHidden = true
+        gochiMessageLabel.isHidden = true
+        
+    }
+    // MARK: - 버튼 동작 관련 함수
+    @objc func riceButtonTapped() {
+        if gochiRiceTextField.text!.isEmpty {
+            GochiModel.gochiRice = 1
+        }else{
+            if let rice = Int(gochiRiceTextField.text!), rice < 100 {
+                GochiModel.gochiRice = rice
+            }else{
+                //1.
+                let alert = UIAlertController(
+                    title: "입력을 확인해주세요.",
+                    message: "숫자이면서 99이하의 수를 입력해주세요.",
+                    preferredStyle: .alert
+                )
+                //2.
+                let ok = UIAlertAction(title: "확인", style: .default)
+                //3.
+                alert.addAction(ok)
+                //4
+                present(alert, animated: true)
+            }
+        }
+        gochiRiceTextField.text = ""
+        setUpDataGochi()
+    }
+    @objc func waterButtonTapped() {
+        if gochiWaterTextField.text!.isEmpty {
+            GochiModel.gochiWater = 1
+        }else{
+            if let water = Int(gochiWaterTextField.text!), water < 50 {
+                GochiModel.gochiWater = water
+            }else{
+                //1.
+                let alert = UIAlertController(
+                    title: "입력을 확인해주세요.",
+                    message: "숫자이면서 49이하의 수를 입력해주세요.",
+                    preferredStyle: .alert
+                )
+                //2.
+                let ok = UIAlertAction(title: "확인", style: .default)
+                //3.
+                alert.addAction(ok)
+                //4
+                present(alert, animated: true)
+            }
+        }
+        gochiWaterTextField.text = ""
+        setUpDataGochi()
     }
 
 }

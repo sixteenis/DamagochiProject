@@ -35,11 +35,11 @@ struct GochiModel {
         
     }
     static var getLevel: Int {
-        let result = (Self.gochiRice / 5) + (Self.gochiWater / 2)
-        
-        return result / 10
+        let result = (Self.gochiRice / 5) + (Self.gochiWater / 2) / 10
+        print(result)
+        return result
     }
-    static var getImage: String {
+    static var getGochiNum: String {
         switch gochi {
         case "따끔따끔 다마고치":
             return "1"
@@ -50,6 +50,38 @@ struct GochiModel {
         default:
             return "??"
         }
+    }
+    static var getGochiLevelNum: String{
+        switch getLevel{
+        case 0...19:
+            return "1"
+        case 20...29:
+            return "2"
+        case 30...39:
+            return "3"
+        case 40...49:
+            return "4"
+        case 50...59:
+            return "5"
+        case 60...69:
+            return "6"
+        case 70...79:
+            return "7"
+        case 80...89:
+            return "8"
+        case 90...99:
+            return "9"
+        default:
+            return "9"
+        }
+    }
+    static var stateText: String {
+        return "LV\(GochiModel.getGochiLevelNum), 밥알 \(GochiModel.gochiRice)개, 물방울 \(GochiModel.gochiWater)개"
+    }
+    static func reset() {
+        UserDefaults.standard.setValue(0, forKey: "gochiRice")
+        UserDefaults.standard.setValue(0, forKey: "gochiWater")
+        
     }
 }
 struct Gochi{

@@ -8,9 +8,13 @@
 import Foundation
 
 struct UserModel{
-    static var nickName: String? {
+    static var nickName: String {
         get{
-            return UserDefaults.standard.string(forKey: "nickName")
+            if UserDefaults.standard.string(forKey: "nickName") == nil{
+                return "유저"
+            }else{
+                return UserDefaults.standard.string(forKey: "nickName")!
+            }
         }set{
             UserDefaults.standard.setValue(newValue, forKey: "nickName")
         }

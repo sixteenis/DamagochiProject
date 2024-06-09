@@ -122,11 +122,12 @@ class StartGochGameViewController: UIViewController {
     }
     // MARK: - 네비게이션 세팅 부분
     func setUpNV() {
-        if let user = UserModel.nickName {
-            navigationItem.title = "\(user)님의 다마고치"
-        }else{
-            navigationItem.title = "유저님의 다마고치"
-        }
+        
+        navigationItem.title = "\(UserModel.nickName)님의 다마고치"
+        
+        let item = UIBarButtonItem(image: UIImage(systemName: "person.circle"),style: .plain,  target: self, action: #selector(nvButtonTapped))
+        item.tintColor = .black
+        navigationItem.rightBarButtonItem = item
     }
     // MARK: - UI 세팅 부분
     func setUpUI() {
@@ -249,6 +250,10 @@ class StartGochGameViewController: UIViewController {
         }
         gochiWaterTextField.text = ""
         setUpDataGochi()
+    }
+    @objc func nvButtonTapped() {
+        let vc = SettingViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }

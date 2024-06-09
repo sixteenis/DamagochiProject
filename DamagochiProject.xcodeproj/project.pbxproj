@@ -20,6 +20,9 @@
 		06C545B22C132B8200B3F23A /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545B12C132B8200B3F23A /* Color+.swift */; };
 		06C545B42C136A4500B3F23A /* StartGochGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C545B32C136A4500B3F23A /* StartGochGameViewController.swift */; };
 		06F52F902C14A6FC00487212 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52F8F2C14A6FC00487212 /* UserModel.swift */; };
+		06F52FB22C15ED4600487212 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB12C15ED4600487212 /* SettingViewController.swift */; };
+		06F52FB42C15EF3D00487212 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB32C15EF3D00487212 /* SettingTableViewCell.swift */; };
+		06F52FB62C15F17300487212 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB52C15F17300487212 /* SettingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		06C545B12C132B8200B3F23A /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		06C545B32C136A4500B3F23A /* StartGochGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGochGameViewController.swift; sourceTree = "<group>"; };
 		06F52F8F2C14A6FC00487212 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		06F52FB12C15ED4600487212 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		06F52FB32C15EF3D00487212 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		06F52FB52C15F17300487212 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 			children = (
 				06C545A72C12C61300B3F23A /* SelectionViewController.swift */,
 				06C545B32C136A4500B3F23A /* StartGochGameViewController.swift */,
+				06F52FB12C15ED4600487212 /* SettingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -98,6 +105,7 @@
 			children = (
 				06C545AF2C1315C100B3F23A /* GochiModel.swift */,
 				06F52F8F2C14A6FC00487212 /* UserModel.swift */,
+				06F52FB52C15F17300487212 /* SettingModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				06C545AD2C12E3B200B3F23A /* GochisTableViewCell.swift */,
+				06F52FB32C15EF3D00487212 /* SettingTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -196,12 +205,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F52FB42C15EF3D00487212 /* SettingTableViewCell.swift in Sources */,
 				06C545B22C132B8200B3F23A /* Color+.swift in Sources */,
 				06C545A62C12C58500B3F23A /* ReuseIdentifier+.swift in Sources */,
 				06C545A82C12C61300B3F23A /* SelectionViewController.swift in Sources */,
 				06C5458D2C12C42200B3F23A /* AppDelegate.swift in Sources */,
 				06C545B42C136A4500B3F23A /* StartGochGameViewController.swift in Sources */,
+				06F52FB22C15ED4600487212 /* SettingViewController.swift in Sources */,
 				06C5458F2C12C42200B3F23A /* SceneDelegate.swift in Sources */,
+				06F52FB62C15F17300487212 /* SettingModel.swift in Sources */,
 				06C545B02C1315C100B3F23A /* GochiModel.swift in Sources */,
 				06F52F902C14A6FC00487212 /* UserModel.swift in Sources */,
 				06C545AE2C12E3B200B3F23A /* GochisTableViewCell.swift in Sources */,

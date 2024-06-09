@@ -23,6 +23,7 @@
 		06F52FB22C15ED4600487212 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB12C15ED4600487212 /* SettingViewController.swift */; };
 		06F52FB42C15EF3D00487212 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB32C15EF3D00487212 /* SettingTableViewCell.swift */; };
 		06F52FB62C15F17300487212 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB52C15F17300487212 /* SettingModel.swift */; };
+		06F52FB82C15FBA100487212 /* ChangeNickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB72C15FBA100487212 /* ChangeNickNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		06F52FB12C15ED4600487212 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		06F52FB32C15EF3D00487212 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		06F52FB52C15F17300487212 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		06F52FB72C15FBA100487212 /* ChangeNickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNickNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				06C545A72C12C61300B3F23A /* SelectionViewController.swift */,
 				06C545B32C136A4500B3F23A /* StartGochGameViewController.swift */,
 				06F52FB12C15ED4600487212 /* SettingViewController.swift */,
+				06F52FB72C15FBA100487212 /* ChangeNickNameViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				06C5458F2C12C42200B3F23A /* SceneDelegate.swift in Sources */,
 				06F52FB62C15F17300487212 /* SettingModel.swift in Sources */,
 				06C545B02C1315C100B3F23A /* GochiModel.swift in Sources */,
+				06F52FB82C15FBA100487212 /* ChangeNickNameViewController.swift in Sources */,
 				06F52F902C14A6FC00487212 /* UserModel.swift in Sources */,
 				06C545AE2C12E3B200B3F23A /* GochisTableViewCell.swift in Sources */,
 			);

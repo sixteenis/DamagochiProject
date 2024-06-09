@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 class SettingViewController: UIViewController {
     let settingTable = UITableView()
     override func viewDidLoad() {
@@ -64,5 +66,33 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch settingList[indexPath.row].settingType{
+        case .nickName:
+            let vc = ChangeNickNameViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .gochiChange:
+            let vc = SelectionViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .resetData:
+            //1.
+            let alert = UIAlertController(
+                title: "데이터 초기화",
+                message: "정말 다시 처음부터 시작하실 건가용?",
+                preferredStyle: .alert
+            )
+            //2.
+            let ok = UIAlertAction(title: "웅냥", style: .default) { _ in
+                GochiModel.reset()
+            }
+            let cancel = UIAlertAction(title: "아니!!", style: .cancel)
+            
+            //3.
+            alert.addAction(cancel)
+            alert.addAction(ok)
+            //4
+            present(alert, animated: true)
+        }
+    }
 }
+

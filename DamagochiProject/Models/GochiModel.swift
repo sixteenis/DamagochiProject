@@ -81,6 +81,7 @@ struct GochiModel {
     static func reset() {
         UserDefaults.standard.setValue(0, forKey: "gochiRice")
         UserDefaults.standard.setValue(0, forKey: "gochiWater")
+        self.gochi = nil
         
     }
 }

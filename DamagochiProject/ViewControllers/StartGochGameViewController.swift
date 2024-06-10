@@ -32,6 +32,7 @@ class StartGochGameViewController: UIViewController {
         setUpLayout()
         setUpUI()
         setUpButton()
+        gochiMessageLabel.text = GochiModel.gochimessage(n: Int.random(in: 0...4))
     }
     override func viewWillAppear(_ animated: Bool) {
         setUpDataGochi()
@@ -133,14 +134,15 @@ class StartGochGameViewController: UIViewController {
     func setUpUI() {
         view.backgroundColor = .gochiBackgroundColor
         
-        gochiMessageImage.isHidden = true
-        gochiMessageLabel.isHidden = true
+//        gochiMessageImage.isHidden = true
+//        gochiMessageLabel.isHidden = true
 
         gochiMessageImage.image = .bubble
         gochiImage.contentMode = .scaleAspectFill
         
         
         gochiMessageLabel.numberOfLines = 0
+        gochiMessageLabel.textAlignment = .center
         
         //gochiImage.image = ._1_2
         
@@ -206,6 +208,7 @@ class StartGochGameViewController: UIViewController {
     }
     // MARK: - 버튼 동작 관련 함수
     @objc func riceButtonTapped() {
+        gochiMessageLabel.text = GochiModel.gochimessage(n: Int.random(in: 0...4))
         if gochiRiceTextField.text!.isEmpty {
             GochiModel.gochiRice = 1
         }else{
@@ -230,6 +233,7 @@ class StartGochGameViewController: UIViewController {
         setUpDataGochi()
     }
     @objc func waterButtonTapped() {
+        gochiMessageLabel.text = GochiModel.gochimessage(n: Int.random(in: 0...4))
         if gochiWaterTextField.text!.isEmpty {
             GochiModel.gochiWater = 1
         }else{

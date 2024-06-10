@@ -84,6 +84,20 @@ struct GochiModel {
         self.gochi = nil
         
     }
+    static func gochimessage(n: Int) -> String{
+        switch n{
+        case 0:
+            return "\(UserModel.nickName)님 좋은 하루에요!"
+        case 1:
+            return "\(UserModel.nickName)님 코딩 공부 화팅!"
+        case 2:
+            return "\(UserModel.nickName)님 헬로우~"
+        case 3:
+            return "\(UserModel.nickName)님 방가방가"
+        default:
+            return "얄루~"
+        }
+    }
 }
 struct Gochi{
     let name: String

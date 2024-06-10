@@ -44,6 +44,9 @@ class ChangeNickNameViewController: UIViewController {
         view.backgroundColor = .gochiBackgroundColor
         
         line.backgroundColor = .gochiFontColor
+        
+        nickNameTextField.placeholder = "\(UserModel.nickName)님의 이름을 알려주세요!"
+        nickNameTextField.text = UserModel.nickName
     }
     func setUpVC() {
         navigationItem.title = "\(UserModel.nickName)님의 이름 정하기"

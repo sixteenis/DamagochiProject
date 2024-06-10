@@ -25,6 +25,7 @@
 		06F52FB62C15F17300487212 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB52C15F17300487212 /* SettingModel.swift */; };
 		06F52FB82C15FBA100487212 /* ChangeNickNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB72C15FBA100487212 /* ChangeNickNameViewController.swift */; };
 		06F52FBA2C160C0200487212 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FB92C160C0200487212 /* Coordinator.swift */; };
+		06F52FC12C16D37A00487212 /* ViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F52FC02C16D37A00487212 /* ViewController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		06F52FB52C15F17300487212 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		06F52FB72C15FBA100487212 /* ChangeNickNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNickNameViewController.swift; sourceTree = "<group>"; };
 		06F52FB92C160C0200487212 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		06F52FC02C16D37A00487212 /* ViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				06C545A52C12C58500B3F23A /* ReuseIdentifier+.swift */,
 				06C545B12C132B8200B3F23A /* Color+.swift */,
 				06F52FB92C160C0200487212 /* Coordinator.swift */,
+				06F52FC02C16D37A00487212 /* ViewController+.swift */,
 			);
 			path = "Exteions+";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				06F52FBA2C160C0200487212 /* Coordinator.swift in Sources */,
 				06F52FB22C15ED4600487212 /* SettingViewController.swift in Sources */,
 				06C5458F2C12C42200B3F23A /* SceneDelegate.swift in Sources */,
+				06F52FC12C16D37A00487212 /* ViewController+.swift in Sources */,
 				06F52FB62C15F17300487212 /* SettingModel.swift in Sources */,
 				06C545B02C1315C100B3F23A /* GochiModel.swift in Sources */,
 				06F52FB82C15FBA100487212 /* ChangeNickNameViewController.swift in Sources */,

@@ -192,6 +192,8 @@ class StartGochGameViewController: UIViewController {
         gochiImage.image = UIImage(named: "\(GochiModel.getGochiNum)-\(GochiModel.getGochiLevelNum)")
         gochiNameLabel.text = GochiModel.gochi
         gochiState.text = GochiModel.stateText
+        
+        navigationItem.title = "\(UserModel.nickName)님의 다마고치"
     }
     func sendMessage() {
         gochiMessageImage.isHidden = false

@@ -19,7 +19,10 @@ class SettingViewController: UIViewController {
         setUpNV()
         setUpTable()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        settingTable.reloadData()
+    }
     // MARK: - connect 부분
     func setUpHierarch() {
         view.addSubview(settingTable)
@@ -84,6 +87,15 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource{
             //2.
             let ok = UIAlertAction(title: "웅냥", style: .default) { _ in
                 GochiModel.reset()
+                let vc = SelectionViewController()
+                                
+                if let navController = self.navigationController {
+                    navController.setViewControllers([vc], animated: true)
+                } else {
+                    let navController = UINavigationController(rootViewController: vc)
+                    navController.modalPresentationStyle = .fullScreen
+                    self.present(navController, animated: true, completion: nil)
+                }
             }
             let cancel = UIAlertAction(title: "아니!!", style: .cancel)
             

@@ -18,17 +18,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-        if GochiModel.gochi == nil{
-            let vc = SelectionViewController()
-            let nv = UINavigationController(rootViewController: vc)
-            window?.rootViewController = nv // sb entrypoin
-            window?.makeKeyAndVisible() // show
+        //if GochiModel.gochi == nil{
+        let selectionVC = SelectionViewController()
+        let startVC = StartGochGameViewController()
+        
+        let nv: UINavigationController
+        if GochiModel.gochi == nil {
+            nv = UINavigationController(rootViewController: selectionVC)
         }else{
-            let vc = StartGochGameViewController()
-            let nv = UINavigationController(rootViewController: vc)
-            window?.rootViewController = nv // sb entrypoin
-            window?.makeKeyAndVisible() // show
+            nv = UINavigationController(rootViewController: startVC)
         }
+        window?.rootViewController = nv // sb entrypoin
+        window?.makeKeyAndVisible() // show
+//        }else{
+//            let vc = StartGochGameViewController()
+//            let nv = UINavigationController(rootViewController: vc)
+//            window?.rootViewController = nv // sb entrypoin
+//            window?.makeKeyAndVisible() // show
+//        }
         
     }
 

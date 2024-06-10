@@ -72,6 +72,7 @@ class SettingTableViewCell: UITableViewCell {
         settingnickName.textColor = .gochiFontColor
         settingnickName.contentMode = .right
         
+        
         settingimage2.contentMode = .scaleAspectFit
         settingimage2.tintColor = .gochiFontColor
     }
@@ -83,8 +84,8 @@ class SettingTableViewCell: UITableViewCell {
         
         settingtitle.text = data.settitle
 
-        settingnickName.text = data.setnickName != nil ? data.setnickName : ""
-
+        settingnickName.text = data.setnickName != nil ? UserModel.nickName : ""
+        
         settingimage2.image = UIImage(systemName: data.setimage2)
     }
 

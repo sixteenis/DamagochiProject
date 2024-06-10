@@ -84,11 +84,16 @@ extension SelectionViewController:UITableViewDelegate, UITableViewDataSource{
             //2.
             let ok = UIAlertAction(title: "확인", style: .default,handler: {_ in
                 let vc = StartGochGameViewController()
-                vc.modalPresentationStyle = .fullScreen
                 GochiModel.gochi = gochi.name
-                self.present(vc, animated: false, completion: nil)
-                
-                
+                                
+                if let navController = self.navigationController {
+                    navController.setViewControllers([vc], animated: true)
+                } else {
+                    let navController = UINavigationController(rootViewController: vc)
+                    navController.modalPresentationStyle = .fullScreen
+                    self.present(navController, animated: true, completion: nil)
+                }
+
             })
             let cancel = UIAlertAction(title: "취소", style: .cancel)
             

@@ -17,6 +17,7 @@ class ChangeNickNameViewController: UIViewController {
         setUpHierarch()
         setUpLayout()
         setUpUI()
+        setUpVC()
     }
     
     // MARK: - connect 부분
@@ -40,6 +41,8 @@ class ChangeNickNameViewController: UIViewController {
     
     // MARK: - UI 세팅 부분
     func setUpUI() {
+        view.backgroundColor = .gochiBackgroundColor
+        
         line.backgroundColor = .gochiFontColor
     }
     func setUpVC() {
